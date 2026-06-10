@@ -12,7 +12,8 @@ const HOST = "sportapi7.p.rapidapi.com";
 app.get("/matches/:date", async (req, res) => {
   try {
     const response = await fetch(
-      `https://sportapi7.p.rapidapi.com/api/v1/sport/football/scheduled-events/${req.params.date}`,
+      `https://football-proxy-futboll-app.up.railway.app/matches/
+${req.params.date}`,
       { headers: { "X-RapidAPI-Key": RAPIDAPI_KEY, "X-RapidAPI-Host": HOST } }
     );
     const data = await response.json();
